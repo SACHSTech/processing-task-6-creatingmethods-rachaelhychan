@@ -8,8 +8,8 @@ public class Sketch extends PApplet {
      */
 
     public void settings() {
-    // put your size call here
-      size(400, 400);
+        // put your size call here
+        size(400, 400);
     }
 
     /** 
@@ -22,41 +22,39 @@ public class Sketch extends PApplet {
 
     public void draw() {
 
-      int intWidthOfTheHouse;
-      int intHeightOfTheHouse;
-      
-      intWidthOfTheHouse = 242;
-      intHeightOfTheHouse = 185;
+        int intWidthOfTheHouse;
+        int intHeightOfTheHouse;
+        
+        intWidthOfTheHouse = 242;
+        intHeightOfTheHouse = 185;
 
-      // Call the method drawHouseWithColorRGB to draw a Red House
-      drawHouseWithColorRGB(140, 40, 255, 0, 0);
+        // Call the method drawHouseWithColorRGB to draw a Red House
+        drawHouseWithColorRGB(140, 40, 255, 0, 0);
 
-      // Call the method drawHouseWithColorRGB to draw a Green House
-      drawHouseWithColorRGB(30, 200, 0, 255, 0);
+        // Call the method drawHouseWithColorRGB to draw a Green House
+        drawHouseWithColorRGB(30, 200, 0, 255, 0);
 
-      // Call the method drawHouseWithColorRGB to draw a Blue House
-      drawHouseWithColorRGB(180, 180, 0, 0, 255);
+        // Call the method drawHouseWithColorRGB to draw a Blue House
+        drawHouseWithColorRGB(180, 180, 0, 0, 255);
 
-      // Call the method getHorticalCenterOfHouse and getVerticalCenterOfHouse to get the 
-      // center of canvas and drawHouseWithColorRGB to draw a White House
-      drawHouseWithColorRGB(getHorizontalCenterOfHouse(intWidthOfTheHouse), 
-                  getVerticalCenterOfHouse(intHeightOfTheHouse), 
-                  255, 255, 255);
+        // Call the method getHorticalCenterOfHouse and getVerticalCenterOfHouse to get the 
+        // center of canvas and drawHouseWithColorRGB to draw a White House
+        drawHouseWithColorRGB(getHorizontalCenterOfHouse(intWidthOfTheHouse), getVerticalCenterOfHouse(intHeightOfTheHouse), 255, 255, 255);
 
-      // Call the method drawFlower to draw a flower at the left top corner
-      drawFlower(0, 0);
+        // Call the method drawFlower to draw a flower at the left top corner
+        drawFlower(0, 0);
 
-      // Call the method drawFlower to draw a flower at the right top corner
-      drawFlower(width, 0);
+        // Call the method drawFlower to draw a flower at the right top corner
+        drawFlower(width, 0);
 
-      // Call the method drawFlower to draw a flower at the left bottom corner
-      drawFlower(0, height);
+        // Call the method drawFlower to draw a flower at the left bottom corner
+        drawFlower(0, height);
 
-      // Call the method drawFlower to draw a flower at the right bottom corner
-      drawFlower(width, height);
+        // Call the method drawFlower to draw a flower at the right bottom corner
+        drawFlower(width, height);
 
-      // Call the method drawFlower to draw a flower at the center
-      drawFlower(width / 2, height / 2);
+        // Call the method drawFlower to draw a flower at the center
+        drawFlower(width / 2, height / 2);
 
     }
 
@@ -69,29 +67,29 @@ public class Sketch extends PApplet {
     *
     */
     public void drawFlower(int intX, int intY) {
-      // Define a variable for the number of Petal
-      int intPetalNum;
+        // Define a variable for the number of Petal
+        int intPetalNum;
 
-      // Set Colour of Stroke to Black
-      stroke(0);
+        // Set Colour of Stroke to Black
+        stroke(0);
 
-      // Use Translate Function to Move Origin to the X and Y coordinate from the input parameters
-      translate(intX, intY);
+        // Use Translate Function to Move Origin to the X and Y coordinate from the input parameters
+        translate(intX, intY);
 
-      // Create the Eight Petals of the Flower
-      for(intPetalNum = 1; intPetalNum <= 8; intPetalNum ++) {
-          rotate(radians(45));
-          fill(230, 120, 0);
-          ellipse(0, -27, 16, 80);
-      }
+        // Create the Eight Petals of the Flower
+        for(intPetalNum = 1; intPetalNum <= 8; intPetalNum ++) {
+            rotate(radians(45));
+            fill(230, 120, 0);
+            ellipse(0, -27, 16, 80);
+        }
 
-      // Create Center of the Flower
-      fill(0, 77, 13);
-      stroke(0, 77, 13);
-      ellipse(0, 0, 36, 36);
+        // Create Center of the Flower
+        fill(0, 77, 13);
+        stroke(0, 77, 13);
+        ellipse(0, 0, 36, 36);
 
-      // Move Origin Back to the original location
-      translate(-intX, -intY);
+        // Move Origin Back to the original location
+        translate(-intX, -intY);
     }
 
     /**
@@ -134,8 +132,8 @@ public class Sketch extends PApplet {
     *
     */
     public int getHorizontalCenterOfHouse (int intWidthOfHouse) {
-      // calculate the Horizontal center 
-      return ((width - intWidthOfHouse) / 2);
+        // calculate the Horizontal center 
+        return ((width - intWidthOfHouse) / 2);
     }
 
     /**
@@ -146,7 +144,7 @@ public class Sketch extends PApplet {
     *
     */
     public int getVerticalCenterOfHouse (int intHeightOfHouse) {
-      return ((height - intHeightOfHouse) / 2);
+        return ((height - intHeightOfHouse) / 2);
     }
 
 }
